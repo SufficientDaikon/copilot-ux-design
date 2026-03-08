@@ -1,0 +1,14 @@
+{
+  "name": "copilot-ux-design",
+  "description": "UX design agent that defines interaction patterns, component states, transitions, form UX, and accessibility requirements. Part of the sdd-vscode-agents collection.",
+  "version": "1.0.0",
+  "author": { "name": "SufficientDaikon" },
+  "license": "MIT",
+  "homepage": "https://github.com/SufficientDaikon/copilot-ux-design",
+  "repository": "https://github.com/SufficientDaikon/copilot-ux-design",
+  "keywords": ["ux-design", "interactions", "accessibility", "component-states", "form-ux"],
+  "category": "Design",
+  "tags": ["sdd-vscode-agents"],
+  "agents": "agents/",
+  "hooks": "hooks.json"
+}
