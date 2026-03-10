@@ -1,70 +1,63 @@
+<div align="center">
+
+<img src="https://img.shields.io/badge/VS%20Code%20Copilot%20Agent-UX%20Designer-A177FE?style=for-the-badge&logo=github-copilot&logoColor=white" />
+
 # copilot-ux-design
 
-> **Part of [sdd-vscode-agents](https://github.com/SufficientDaikon/sdd-vscode-agents)** — install the full collection for the complete SDD pipeline + UI/UX lifecycle.
+*Defines interaction patterns, component states, transitions, and accessibility requirements.*
 
-A VS Code Copilot agent plugin that defines interaction patterns, component states, transitions, form UX, and accessibility requirements.
+[![Part of SDD Agent Suite](https://img.shields.io/badge/Part%20of-SDD%20Agent%20Suite-A177FE?style=flat-square)](https://github.com/SufficientDaikon/sdd-vscode-agents)
 
-## What it does
+</div>
 
-The **ux-design** agent creates UX specifications:
-- Defines micro-interactions and transition specifications
-- Maps all component states (default, hover, active, disabled, error, loading)
-- Specifies form UX with validation, error messages, and recovery flows
-- Documents accessibility requirements (keyboard navigation, screen readers, ARIA)
-- Creates animation specifications with timing and easing
+---
 
-## Hooks included
+## What It Does
 
-| Hook | Event | What it does |
-|------|-------|-------------|
-| **Input detection** | `SessionStart` | Auto-detects wireframes/ and information-architecture.md for UX design input |
-| **UX spec completion** | `Stop` | Checks for ux-spec.md and suggests next step (UI design or design review) |
+The **UX Design** agent defines how your UI behaves — every interaction pattern, component state, transition, form behavior, and accessibility requirement. It produces a comprehensive UX specification that ensures consistent, delightful user experiences.
 
-## Install
+It goes beyond static designs to specify micro-interactions, loading states, error handling, form validation flows, keyboard navigation, and screen reader behavior. Every interactive element gets a complete state machine definition.
 
-### Via Copilot CLI
-```bash
-copilot plugin install SufficientDaikon/copilot-ux-design
-```
+The UX specification serves as the behavioral contract between design and engineering — ensuring that the implemented product not only looks right but feels right, with smooth transitions, clear feedback, and full accessibility compliance.
 
-### Via VS Code settings
+## Features
 
-Clone the repo and add to your `settings.json`:
-```json
-"chat.plugins.paths": {
-    "/path/to/copilot-ux-design": true
-}
-```
+- ✅ Micro-interaction and animation specifications
+- ✅ Component state machines (idle, hover, active, disabled, error)
+- ✅ Form UX patterns with validation and error handling
+- ✅ WCAG accessibility requirements and keyboard navigation
 
-### Via local path
-```bash
-git clone https://github.com/SufficientDaikon/copilot-ux-design.git
-copilot plugin install ./copilot-ux-design
-```
+## Installation
+
+1. Install the [SDD VS Code Agents](https://github.com/SufficientDaikon/sdd-vscode-agents) extension
+2. Open VS Code Copilot Chat
+3. Use `@ux-design` to invoke this agent
 
 ## Usage
 
-Switch to the **ux-design** agent in VS Code chat, then:
 ```
-Create the UX specification based on wireframes and IA document
-```
-**Expected output**: A comprehensive ux-spec.md with interactions, states, animations, and accessibility specs.
-
-## Pipeline position
-
-```
-wireframe -> **ux-design** -> ui-design
+@ux-design Define the interaction patterns for the data table component
 ```
 
-## Full collection
+## Part of the SDD Agent Suite
 
-This agent works best as part of the full SDD + UI/UX pipeline. Install all 13 agents:
+This agent is one of 13 specialized Copilot Chat participants in the [SDD VS Code Agents](https://github.com/SufficientDaikon/sdd-vscode-agents) ecosystem.
 
-```bash
-copilot plugin install SufficientDaikon/sdd-vscode-agents
-```
-
-See the [full collection](https://github.com/SufficientDaikon/sdd-vscode-agents) for documentation and the complete agent list.
+| Agent | Role |
+|---|---|
+| **spec-writer** | Specification Architect |
+| **implementer** | Implementation Engineer |
+| **reviewer** | Compliance Reviewer |
+| **packager** | Package Engineer |
+| **ui-lifecycle-master** | UI Lifecycle Orchestrator |
+| **ux-research** | UX Researcher |
+| **info-arch** | Information Architect |
+| **wireframe** | Wireframe Designer |
+| **ui-design** | Visual Designer |
+| **ux-design** | UX Designer |
+| **frontend-impl** | Frontend Engineer |
+| **design-reviewer** | Design Reviewer |
+| **ux-testing** | UX Tester |
 
 ## License
 
